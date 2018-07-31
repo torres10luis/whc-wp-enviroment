@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts 
  * 
- * Template Name: Home Width Page Temp
+ * Template Name: Contact Page 
  * 
  */
 

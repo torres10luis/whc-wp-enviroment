@@ -2,15 +2,15 @@
 /**
  * The template for displaying all single posts 
  * 
- * Template Name: Home Width Page Temp
+ * Template Name: About Page
  * 
  */
 
 get_header();
 ?>
     <div class="col-md-8 text-uppercase text-center">
-        <h1>Hello, Welcome to the Home Page</h1> <hr>   
-        <p>Please Feel free to ask question</p> <hr>
+        <h1>Hello, Welcome to the About</h1> <hr>   
+        
     </div>
     <div class="col-md-8">
     
