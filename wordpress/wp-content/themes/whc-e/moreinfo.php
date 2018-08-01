@@ -2,17 +2,17 @@
 /**
  * The template for displaying all single posts 
  * 
- * Template Name: Contact Page 
+ * Template Name: MoreInfo
  * 
  */
 
 get_header();
 ?>
-    <div class="col-md-8 text-uppercase text-center">
+    <div class="col-md-12 text-uppercase text-center">
         <h1>Hello, Welcome to the Contact Page</h1> <hr>   
-        <p>Please Feel free to follow us to stay up to date with the most recent news!</p> <hr>
+        <p>Please Feel free to follow us to stay up to date with the most recent news!</p> <hr>    
 
-        <?php
+    <?php
 		while ( have_posts() ) :
 			the_post();
 			
@@ -25,9 +25,8 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-    </div>
-    
 
+    </div>
 
 <div class="col-md-4">
        <?php get_sidebar(); ?>

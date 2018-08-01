@@ -45,6 +45,7 @@ if ( ! function_exists( 'whc_e_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'whc-e' ),
+			'primary' => __( 'Primary Menu', 'whc-e' ),
 		) );
 
 		/*
@@ -126,7 +127,7 @@ function whc_e_scripts() {
 
 	wp_enqueue_style( 'jquery' );
 
-	wp_enqueue_script( 'whc-bootstrap_js', get_template_directory_uri() . './jstwo/bootstrap.min.js', array('jquery'), '20170710', true );
+	wp_enqueue_script( 'whc-bootstrap_js', get_template_directory_uri() . './jstwo/bootstrap.min.js', array('jquery'), '20170710', true ); 
 
 	wp_enqueue_script( 'whc-e-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -165,3 +166,19 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// implement bootstrap nav walker
+
+if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.php' ) ) {
+	// file does not exist... return an error.
+	return new WP_Error( 'class-wp-bootstrap-navwalker-missing', __( 'It appears the class-wp-bootstrap-navwalker.php file may be missing.', 'wp-bootstrap-navwalker' ) );
+} else {
+	// file exists... require it.
+    require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+}
+
+// require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+
+
+// register_nav_menus( array(
+// 	'primary' => __( 'Primary Menu', 'THEMENAME' ),
+// ) );
