@@ -8,9 +8,13 @@
 
 get_header();
 ?>
-    <div class="col-md-8 text-uppercase text-center">
-        <h1>Hello, Welcome to the Contact Page</h1> <hr>   
+    
+    <div class="col-md-12 text-uppercase text-center">
+        <h4>Hello, Welcome to the Contact Page</h4> <hr>   
         <p>Please Feel free to follow us to stay up to date with the most recent news!</p> <hr>
+    </div>
+
+        <div class="col-md-12 d-flex justify-content-around text-center">
 
         <?php
 		while ( have_posts() ) :
@@ -25,11 +29,11 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-    </div>
-    
+        </div>
+     
 
 
-<div class="col-md-4">
+<div class="col-md-12 d-flex justify-content-center">
        <?php get_sidebar(); ?>
     </div>
 <?php
